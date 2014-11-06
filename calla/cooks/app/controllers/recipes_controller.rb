@@ -1,15 +1,18 @@
 class RecipesController < ApplicationController
 
 #create, edit, or delete a Recipe
+  def index
+    @recipe = Recipe.all
+  end
 
   def new
     @recipe = Recipe.new
   end
 
   def create
-    @recipe = Recipe.new(params.require(:recipe).permit(:name, :instructions, :prep, :cook))
+    @recipe = RecipeForm.new(params[:recipe_form])
     if @recipe.save
-      redirect_to root_path
+      redirect_to recipe_path(@recipe_form.recipe.id)
     else
       render :new
     end
