@@ -18,11 +18,16 @@ class IngredientsController < ApplicationController
   end
 
   def update
-    @ringredient = Ingredient.find(params[:id])
+    @ingredient = Ingredient.find(params[:id])
     if @ingredient = Ingredient.update(params.require(:ingredient).permit(:name, :quantity))
       redirect_to root_path
     else
       render :edit
     end
   end
+
+  
+
+
+
 end

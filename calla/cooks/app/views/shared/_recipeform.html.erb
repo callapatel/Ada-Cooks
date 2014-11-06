@@ -1,0 +1,23 @@
+<%= form_tag recipies_path do |f| %>
+  <div>
+  <%= label_tag "recipe_form[name] ", "Name"%> #changes value of hash.
+  <%= text_field_tag "recipe_form[name] " %>
+  </div>
+
+  <div>
+  <%= label_tag "recipe_form[instructions] ", "Instructions" %>
+  <%= text_field_tag recipe_form[instructions] " %>
+  </div>
+
+  <div>
+  <%  Ingredient.all.each do |ingredient| %>
+    <div>
+      <%= check_box_tag "recipie_form[ingredients][]", ingredient.id%>
+      <%= label_tag "recipie_form[ingredients][]", ingredient.name %> 
+      </div>
+  <% end %>
+  </div>
+
+
+<%= submit_tag%>
+<% end %>
