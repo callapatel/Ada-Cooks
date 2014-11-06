@@ -10,8 +10,8 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = RecipeForm.new(params[:recipe_form])
-    if @recipe.save
+    @recipe_form = RecipeForm.new(params[:recipe_form])
+    if @recipe_form.save
       redirect_to recipe_path(@recipe_form.recipe.id)
     else
       render :new
