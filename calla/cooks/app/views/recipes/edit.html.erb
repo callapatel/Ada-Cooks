@@ -1,2 +1,2 @@
 Edit a recipe
-<%= render "/shared/recipeform.html.erb"%>
+<%= render "/shared/recipeform.html.erb", object: edit_recipe_path(@recipe.id)%>
