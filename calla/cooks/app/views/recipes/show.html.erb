@@ -1,0 +1,19 @@
+<div>
+<%= @recipes.name %>
+</div>
+
+<div>
+Prep Time: <%= @recipes.prep %>
+Cooking Time: <%= @recipes.cook %>
+</div>
+<div>
+<% @recipes.ingredients.each do |ingredient| %>
+  <%= ingredient.name %>
+<% end %>
+<%= @recipes.instructions %>
+</div>
+
+<div>
+<%= link_to "All Recipes", recipes_path %>
+<%= button_to "Delete Recipe", recipe_path(@recipes.id), :method => :delete, :confirm => "are you sure you want to delete?" %>
+</div>

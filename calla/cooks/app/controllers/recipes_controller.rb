@@ -34,5 +34,9 @@ class RecipesController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @recipes = Recipe.all.find(params[:id])
+  end
+
 
 end
