@@ -40,20 +40,20 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img src="http://placehold.it/150x50&text=Logo" alt="">
+                  <%=image_tag("LOGO.png")%>
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                     <%= link_to("RECIPE", recipes_path) %>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                       <%= link_to("INGREDIENT", ingredients_path) %>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#">CONTACT</a>
                     </li>
                 </ul>
             </div>
@@ -67,15 +67,20 @@
 
         <!-- Heading Row -->
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-7">
                 <%=image_tag("fruit_medium.jpg")%>
-                <img class="img-responsive img-rounded" src="http://placehold.it/900x350" alt="">
             </div>
             <!-- /.col-md-8 -->
-            <div class="col-md-4">
-                <h1>Business Name or Tagline</h1>
-                <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
-                <a class="btn btn-primary btn-lg" href="#">Call to Action!</a>
+            <div class="col-md-5">
+                <h1>Lowfat M&M's Recipe Book</h1>
+                <p>ABOUT THE BLOG
+
+Peanut Butter Fingers began in September 2009 as a way to share recipes, exercise tips and random musings with my friends and family and has since grown into a blog that I update daily to document my life, fueled by (mostly) healthy food and fitness.
+
+I love creating healthy meals and experimenting with new foods and flavors. I try to live a healthy, balanced life but also enjoy my favorite indulgences (like a peanut butter finger or two… or five ;) ). This blog is constantly updated with my “healthified” versions of indulgent meals, sweaty workouts and quick and simple recipes.
+
+Along with a focus on living an active and healthy life, my blog follows my daily adventures with my husband Ryan and our insane dog, Sadie.</p>
+                <a class="btn btn-primary btn-lg" href="#">View all Recipes</a>
             </div>
             <!-- /.col-md-4 -->
         </div>
@@ -87,8 +92,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="well text-center">
-                    This is a well that is a great spot for a business tagline or phone number for easy access!
-                </div>
+              <h2> <i>good</i>food </h2>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -96,23 +100,22 @@
 
         <!-- Content Row -->
         <div class="row">
-            <div class="col-md-4">
-                <h2>Heading 1</h2>
+            <div class="col-md-5">
+                <h2>Top Recipe:</h2>
+                <h3>Asian Hot & Sour Soup</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
                 <a class="btn btn-default" href="#">More Info</a>
             </div>
             <!-- /.col-md-4 -->
-            <div class="col-md-4">
-                <h2>Heading 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
-                <a class="btn btn-default" href="#">More Info</a>
+            <div class="col-md-7">
+                <%=image_tag("asian-soup-medium.jpg")%>
             </div>
             <!-- /.col-md-4 -->
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
                 <h2>Heading 3</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
                 <a class="btn btn-default" href="#">More Info</a>
-            </div>
+            </div> -->
             <!-- /.col-md-4 -->
         </div>
         <!-- /.row -->
